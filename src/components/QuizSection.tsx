@@ -143,7 +143,7 @@ const QuizSection: React.FC = () => {
                   
                   {showResult && (
                     <Button 
-                      variant="primary" .
+                      variant="primary"
                       onClick={handleNextQuestion}
                     >
                       {currentQuestion < questions.length - 1 ? 'Next Question' : 'See Results'}
