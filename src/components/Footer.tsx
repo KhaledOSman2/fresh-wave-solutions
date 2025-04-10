@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplet, Facebook, Twitter, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Droplet, Facebook, Twitter, Instagram, Linkedin, ArrowUp, Send } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {

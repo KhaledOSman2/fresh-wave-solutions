@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import Button from './Button';
@@ -133,9 +132,9 @@ const ContactSection: React.FC = () => {
                   
                   <div className="pt-2">
                     <Button 
-                      type="submit" 
                       variant="primary" 
                       className="w-full justify-center"
+                      onClick={() => {}}
                     >
                       <Send className="h-4 w-4 mr-2" />
                       Send Message
