@@ -11,20 +11,25 @@ const ContactSection: React.FC = () => {
       
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <span className="inline-block px-3 py-1 bg-sea-50 text-sea-600 rounded-full text-sm font-medium mb-3">Get In Touch</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contact Us</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have questions about our desalination technologies? We're here to help.
+            Have questions about our desalination technologies? We're here to help you find the perfect water solution.
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div>
+          <div className="transition-all duration-500 hover:translate-y-[-5px]">
             <ContactForm />
           </div>
           
           <div className="flex flex-col space-y-6">
-            <ContactInfo />
-            <FAQ />
+            <div className="transition-all duration-500 hover:translate-y-[-5px]">
+              <ContactInfo />
+            </div>
+            <div className="transition-all duration-500 hover:translate-y-[-5px]">
+              <FAQ />
+            </div>
           </div>
         </div>
       </div>
