@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Droplet, Facebook, Twitter, Instagram, Linkedin, ArrowUp, Send } from 'lucide-react';
@@ -50,20 +49,21 @@ const Footer: React.FC = () => {
             <h3 className="text-xl font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {[
-                { name: 'Home', path: '#home' },
-                { name: 'About Us', path: '#about' },
-                { name: 'How It Works', path: '#how-it-works' },
-                { name: 'Quiz', path: '#quiz' },
-                { name: 'Facts', path: '#facts' },
-                { name: 'Contact', path: '#contact' }
+                { name: 'Home', path: '/' },
+                { name: 'About Us', path: '/#about' },
+                { name: 'How It Works', path: '/#how-it-works' },
+                { name: 'Quiz', path: '/#quiz' },
+                { name: 'Facts', path: '/#facts' },
+                { name: 'Solar Companies', path: '/solar-companies' },
+                { name: 'Contact', path: '/#contact' }
               ].map((link) => (
                 <li key={link.name}>
-                  <a 
-                    href={link.path} 
+                  <Link 
+                    to={link.path} 
                     className="text-gray-400 hover:text-sea-300 transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

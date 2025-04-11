@@ -4,12 +4,13 @@ import { Link, useLocation } from 'react-router-dom';
 import { Droplet, Menu, X } from 'lucide-react';
 
 const navItems = [
-  { name: 'Home', path: '#home' },
-  { name: 'About Us', path: '#about' },
-  { name: 'How It Works', path: '#how-it-works' },
-  { name: 'Quiz', path: '#quiz' },
-  { name: 'Facts', path: '#facts' },
-  { name: 'Contact', path: '#contact' }
+  { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/#about' },
+  { name: 'How It Works', path: '/#how-it-works' },
+  { name: 'Quiz', path: '/#quiz' },
+  { name: 'Facts', path: '/#facts' },
+  { name: 'Solar Companies', path: '/solar-companies' },
+  { name: 'Contact', path: '/#contact' }
 ];
 
 const Navbar = () => {
@@ -57,15 +58,18 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.path}
+                to={item.path}
                 className={`text-sm font-medium transition-colors hover:text-sea-700 ${
-                  location.hash === item.path ? 'text-sea-700' : 'text-gray-600'
+                  (location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
+                    ? 'text-sea-700' 
+                    : 'text-gray-600'
                 }`}
+                onClick={handleLinkClick}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
           
@@ -90,18 +94,18 @@ const Navbar = () => {
           <div className="container mx-auto px-4 py-3">
             <nav className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.name}
-                  href={item.path}
+                  to={item.path}
                   className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${
-                    location.hash === item.path 
+                    (location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
                       ? 'bg-sea-50 text-sea-700' 
                       : 'text-gray-600 hover:bg-gray-50'
                   }`}
                   onClick={handleLinkClick}
                 >
                   {item.name}
-                </a>
+                </Link>
               ))}
             </nav>
           </div>
