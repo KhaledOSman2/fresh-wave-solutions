@@ -36,15 +36,15 @@ const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Transforming Water Access Worldwide
+              Who We Are
             </h3>
 
             <p className="text-gray-600 mb-6">
-              At Sea2Fresh, we believe clean water is a fundamental human right. Our team of engineers, scientists, and sustainability experts are dedicated to developing efficient, affordable desalination solutions that can be deployed anywhere in the world.
+              At Sea2Fresh, we are pioneers in solar-powered desalination, providing clean, sustainable, and affordable water solutions. Our mission is to combat water scarcity by utilizing renewable energy and innovative desalination techniques to ensure fresh water is accessible to everyone.
             </p>
 
             <div className="space-y-4">
-              {['Patented membrane technology', 'Solar-powered operations', 'Modular, scalable systems', 'Zero liquid discharge systems'].map((item, index) => (
+              {['100% Renewable Energy: No reliance on harmful fossil fuels.', 'Cost-Effective: Lower operational costs compared to traditional desalination.', 'Eco-Friendly: Zero carbon emissions, contributing to a greener planet.', 'Reliable & Scalable: Designed to provide a consistent and sustainable water supply.'].map((item, index) => (
                 <div key={index} className="flex items-start">
                   <span className="flex-shrink-0 p-1 rounded-full bg-sea-100 mr-3">
                     <Check className="h-5 w-5 text-sea-600" />
