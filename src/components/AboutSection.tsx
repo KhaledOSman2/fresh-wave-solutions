@@ -24,7 +24,7 @@ const AboutSection: React.FC = () => {
   return (
     <section id="about" className="py-20 bg-white relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-blue-50 to-white"></div>
-      
+
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">About Sea2Fresh</h2>
@@ -32,21 +32,17 @@ const AboutSection: React.FC = () => {
             We're on a mission to make fresh water accessible to everyone through innovative desalination technology.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Transforming Water Access Worldwide
             </h3>
-            
+
             <p className="text-gray-600 mb-6">
               At Sea2Fresh, we believe clean water is a fundamental human right. Our team of engineers, scientists, and sustainability experts are dedicated to developing efficient, affordable desalination solutions that can be deployed anywhere in the world.
             </p>
-            
-            <p className="text-gray-600 mb-8">
-              Founded in 2020, our company has already implemented water solutions in 12 countries, providing fresh water to over 500,000 people in water-scarce regions.
-            </p>
-            
+
             <div className="space-y-4">
               {['Patented membrane technology', 'Solar-powered operations', 'Modular, scalable systems', 'Zero liquid discharge systems'].map((item, index) => (
                 <div key={index} className="flex items-start">
@@ -58,11 +54,11 @@ const AboutSection: React.FC = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {features.map((feature, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="water-card flex flex-col items-center text-center p-6 md:p-8 rounded-xl"
               >
                 <div className="mb-4 p-3 rounded-full bg-sea-50">
