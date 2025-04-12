@@ -7,25 +7,25 @@ const steps = [
     number: '01',
     title: 'Sunlight Collection:',
     description: 'Solar panels or heat collectors absorb sunlight to power the system.',
-    image: 'https://cdn.britannica.com/94/192794-050-3F3F3DDD/panels-electricity-order-sunlight.jpg'
+    image: 'https://www.kondaas.com/wp-content/uploads/2023/10/solar-panel-in-ocean-1.png'
   },
   {
     number: '02',
     title: ' Water Intake:',
     description: 'Seawater is pumped in using pumps to begin the purification process.',
-    image: '/placeholder.svg'
+    image: 'https://img.waimaoniu.net/2538/2538-202402200921196717.jpg'
   },
   {
     number: '03',
     title: 'Fresh Water Collection:',
     description: 'Condensed vapor or filtered water is collected in clean tanks.',
-    image: '/placeholder.svg'
+    image: 'https://5.imimg.com/data5/SELLER/Default/2023/12/368399631/JR/LV/GR/30597050/automatic-desalination-plants-1000x1000.jpg'
   },
   {
     number: '04',
-    title: 'Post-treatment',
-    description: 'The filtered water is remineralized and pH-balanced to make it safe and healthy for consumption.',
-    image: '/placeholder.svg'
+    title: 'Storage',
+    description: 'Clean water goes to storage tanks, waste is discarded.',
+    image: 'https://gulfwatertreatment.com/wp-content/uploads/2024/04/water-treatment-plant-1.webp'
   }
 ];
 

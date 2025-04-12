@@ -6,7 +6,7 @@ const ContactInfo: React.FC = () => {
   return (
     <div className="water-card p-6">
       <h3 className="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
-      
+
       <div className="space-y-4">
         <div className="flex items-start">
           <div className="flex-shrink-0 p-2 bg-sea-100 rounded-full mr-4">
@@ -17,7 +17,7 @@ const ContactInfo: React.FC = () => {
             <p className="text-gray-800">info@sea2fresh.com</p>
           </div>
         </div>
-        
+
         <div className="flex items-start">
           <div className="flex-shrink-0 p-2 bg-sea-100 rounded-full mr-4">
             <Phone className="h-5 w-5 text-sea-600" />
@@ -27,7 +27,7 @@ const ContactInfo: React.FC = () => {
             <p className="text-gray-800">+1 (555) 123-4567</p>
           </div>
         </div>
-        
+
         <div className="flex items-start">
           <div className="flex-shrink-0 p-2 bg-sea-100 rounded-full mr-4">
             <MapPin className="h-5 w-5 text-sea-600" />
@@ -35,20 +35,18 @@ const ContactInfo: React.FC = () => {
           <div>
             <h4 className="text-sm font-medium text-gray-500">Address</h4>
             <p className="text-gray-800">
-              123 Coastal Drive<br />
-              Oceanview, CA 90210<br />
-              United States
+              STEM KFS<br />
             </p>
           </div>
         </div>
-        
+
         <div className="flex items-start">
           <div className="flex-shrink-0 p-2 bg-sea-100 rounded-full mr-4">
             <Globe className="h-5 w-5 text-sea-600" />
           </div>
           <div>
             <h4 className="text-sm font-medium text-gray-500">Website</h4>
-            <p className="text-gray-800">www.sea2fresh.com</p>
+            <p className="text-gray-800">sea2fresh.vercel.app</p>
           </div>
         </div>
 

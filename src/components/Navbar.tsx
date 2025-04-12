@@ -9,7 +9,6 @@ const navItems = [
   { name: 'How It Works', path: '/#how-it-works' },
   { name: 'Quiz', path: '/#quiz' },
   { name: 'Facts', path: '/#facts' },
-  { name: 'Solar Companies', path: '/solar-companies' },
   { name: 'Contact', path: '/#contact' }
 ];
 
@@ -17,7 +16,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
-  
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -26,21 +25,20 @@ const Navbar = () => {
         setScrolled(false);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
   // Close mobile menu when a link is clicked
   const handleLinkClick = () => {
     setIsMenuOpen(false);
   };
-  
+
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm py-3' : 'bg-transparent py-5'
-      }`}
+    <header
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 shadow-md backdrop-blur-sm py-3' : 'bg-transparent py-5'
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
@@ -54,27 +52,26 @@ const Navbar = () => {
               Sea2Fresh
             </span>
           </Link>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-sea-700 ${
-                  (location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
-                    ? 'text-sea-700' 
+                className={`text-sm font-medium transition-colors hover:text-sea-700 ${(location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
+                    ? 'text-sea-700'
                     : 'text-gray-600'
-                }`}
+                  }`}
                 onClick={handleLinkClick}
               >
                 {item.name}
               </Link>
             ))}
           </nav>
-          
+
           {/* Mobile menu button */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden focus:outline-none"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -87,7 +84,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
@@ -97,11 +94,10 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${
-                    (location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
-                      ? 'bg-sea-50 text-sea-700' 
+                  className={`text-sm font-medium py-2 px-3 rounded-md transition-colors ${(location.pathname === item.path || (location.pathname === '/' && item.path.startsWith('/#')))
+                      ? 'bg-sea-50 text-sea-700'
                       : 'text-gray-600 hover:bg-gray-50'
-                  }`}
+                    }`}
                   onClick={handleLinkClick}
                 >
                   {item.name}
