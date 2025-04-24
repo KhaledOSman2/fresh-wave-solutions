@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Droplet, Menu, X } from 'lucide-react';
@@ -31,8 +30,18 @@ const Navbar = () => {
   }, []);
 
   // Close mobile menu when a link is clicked
-  const handleLinkClick = () => {
-    setIsMenuOpen(false);
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, path: string) => {
+    if (path.startsWith('/#')) {
+      e.preventDefault();
+      const id = path.split('#')[1];
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+      setIsMenuOpen(false);
+    } else {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -63,7 +72,7 @@ const Navbar = () => {
                     ? 'text-sea-700'
                     : 'text-gray-600'
                   }`}
-                onClick={handleLinkClick}
+                onClick={e => handleNavClick(e, item.path)}
               >
                 {item.name}
               </Link>
@@ -98,7 +107,7 @@ const Navbar = () => {
                       ? 'bg-sea-50 text-sea-700'
                       : 'text-gray-600 hover:bg-gray-50'
                     }`}
-                  onClick={handleLinkClick}
+                  onClick={e => handleNavClick(e, item.path)}
                 >
                   {item.name}
                 </Link>
